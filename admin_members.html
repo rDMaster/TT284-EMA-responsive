@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>OURC Admin </title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" media="screen" />
+    <meta name="viewport" content="width=device-width-width, initial-scale: 1.0, user-scale: 1.0;"/>
+
+</head>
+<body>
+
+
+    <div id="header">
+
+        <div id="logo" >
+            <img src="images/imageSmallSquare.jpg" alt="placeholder image"/>
+            <a href="#">OURC <span>Admin</span></a>
+        </div>
+
+    </div> <!-- close header -->
+
+    <a class="mobile" href="#">MENU</a>
+
+    <div id="container">
+        <div class="sidebar" >
+            <ul id="nav">
+                <li><a href="admin_home.xhtml">Dashboard</a></li>
+                <li><a href="admin_members.xhtml">Members</a></li>
+                <li><a href="admin_event.xhtml">Events</a></li>
+                <li><a href="admin_newseditor.xhtml">News Editor</a></li>
+                <li><a href="admin_contactmembers.xhtml">Contact Members</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Members</h1>
+            <p>Add new members here</p>
+
+            <div class="box" id="memberform">
+                <div class="box-top">
+                    Register a new Member
+                </div>
+                <div class="box-panel">
+                    <form action="">
+                        <fieldset>
+                            <legend>Personal Information:</legend>
+                            <div class="container">
+                                <label for="fname">First name </label>
+                                <input type="text" name="fname" id="fname"/>
+                            </div>
+                            <div class="container">
+                                <label for="lname">Last name </label>
+                                <input type="text" name="lname" id="lname"/>
+                            </div>
+                            <div class="container">
+                                <label for="email">Email    </label>
+                                <input type="text" name="email" id="email"/>
+                            </div>
+
+
+
+                        </fieldset>
+                        <fieldset>
+                            <p>Does the user agree to receive automated emails, if yes please tick the checkbox</p>
+                            <br/>
+
+                            <input type="checkbox" name="recieveemail" id="recieveemail"/> Receive automated emails
+                        </fieldset>
+
+                        <input type="submit" value="Add user"/>
+
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-top">
+                    Display Members
+                </div>
+                <div class="box-panel">
+                    <ul>
+                        <li> Member 1516</li>
+                        <li> Member 1516</li>
+                        <li> Member 1516</li>
+                        <li> Member 1516</li>
+                        <li> Member 1516</li>
+                        <li> Member 1516</li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>OURC Admin </title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" media="screen" />
+    <meta name="viewport" content="width=device-width-width, initial-scale: 1.0, user-scale: 1.0;"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"  type="text/javascript" charset="utf-8"></script>
+
+    <script src="js/ourc_admin.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+<div id="wrapper">
+
+    <div id="header">
+
+        <div id="logo" >
+            <img src="favicon-32x32.png" alt="placeholder image"/>
+            <a href="#">OURC <span>Admin</span></a>
+        </div>
+
+    </div> <!-- close header -->
+
+    <div class="container">
+        <a class="mobile" href="#">MENU</a>
+    </div>
+
+    <div id="container">
+
+        <!-- Navigation -->
+        <div class="sidebar" >
+            <ul id="nav">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Members</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="admin_newseditor.xhtml">News Editor</a></li>
+                <li><a href="#">Contact Members</a></li>
+            </ul>
+        </div>
+        <!-- Navigation -->
+
+        <div class="content">
+            <h1>Post news</h1>
+            <p>Post or edit news </p>
+
+            <!--News editor Panel -->
+            <div class="box">
+                <div class="box-top">
+                    Post news
+                </div>
+                <div class="box-panel " id="news-editor-panel">
+                    <div class="form-container">
+                        <form action="http://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post">
+                            <!-- Editor text box -->
+                            <div class="container">
+                                <label for="newseditor"></label>
+                                <textarea name="newseditor" id="newseditor" cols="30" rows="20">
+
+                                </textarea>
+                            </div>
+                            <!--close container-->
+
+                            <div class="container">
+                                <!--Hidden input for user id tracking-->
+                                <input type="hidden" name="sessionID" value="ABCDEF01-AABB-CCDD-EEFF-ABCDEF012345"/>
+                                <div class="dates-container">
+                                    <label for="newspost-end-date">Removal date</label>
+                                    <input type="text" id="newspost-end-date" value="DD/MM/YYYY"/>
+                                </div>
+                            </div>
+                            <!--close container-->
+
+                            <div class="container">
+                                <input type="submit" value="Post news"/>
+                                <input type="reset" value="reset"/>
+                            </div>
+                            <!--close container-->
+
+                        </form>
+                        <!--close form-->
+                    </div>
+                </div>
+                <!--close panel-->
+            </div>
+            <!--close box-->
+
+
+
+            <!--Previous news Panel -->
+            <div class="box">
+                <div class="box-top">
+                    Previous news
+                </div>
+                <div class="box-panel " id="previous-news-panel">
+                    <ul>
+                        <li><a class="previous-news-link" href="#">Previous news item 1 </a><button class="edit-oldnews-button"> edit</button> </li>
+                        <li><a class="previous-news-link" href="#">Previous news item 2 </a><button class="edit-oldnews-button"> edit</button> </li>
+                        <li><a class="previous-news-link" href="#">Previous news item 3 </a><button class="edit-oldnews-button"> edit</button> </li>
+                        <li><a class="previous-news-link" href="#">Previous news item 4 </a><button class="edit-oldnews-button"> edit</button> </li>
+
+
+                    </ul>
+                </div>
+                <!--close panel-->
+            </div>
+            <!--close box-->
+
+            <!--This is the pop up element which is activated by clicking the edit button for a news item -->
+            <!--This will not be displayed until activated-->
+            <div class="box">
+                <div class="box-top" id="oldnews-top">
+                    Edit news
+                </div>
+                <div class="box-panel" id="oldnews-panel">
+                    <div class="form-container">
+                        <form action="http://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post">
+                            <!-- Editor text box -->
+                            <div class="container">
+                                <h4 id="oldnews-editor-title"></h4>
+                                <label for="oldnewseditor" ></label>
+                                <textarea name="oldnewseditor" id="oldnewseditor" cols="30" rows="20">
+
+                                </textarea>
+                            </div>
+                            <!--close container-->
+
+                            <div class="container">
+                                <!--Hidden input for user id tracking-->
+                                <input type="hidden" name="sessionID" value="ABCDEF01-AABB-CCDD-EEFF-ABCDEF012345"/>
+                                <div class="dates-container">
+                                    <label for="oldnewspost-end-date">Removal date</label>
+                                    <input type="text" id="oldnewspost-end-date" value="DD/MM/YYYY"/>
+                                </div>
+                            </div>
+                            <!--close container-->
+
+                            <div class="container">
+
+                                <input id="oldnews-submit" type="submit" value=" Update "/>
+                                <input type="reset" value="Clear text"/>
+                            </div>
+                            <!--close container-->
+
+                        </form>
+                        <!--close form-->
+                    </div>
+
+                    <button id="oldnews-back-button">back</button>
+                </div>
+                <!--close panel-->
+            </div>
+            <!--close box-->
+
+        </div>
+        <!--close content-->
+    </div>
+</div>
+
+
+</body>
+</html>
